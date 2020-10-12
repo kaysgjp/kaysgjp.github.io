@@ -1,0 +1,328 @@
+@charset "utf-8";
+/*--------------------------------------------------------------
+Base styles
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+textarea {
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #EDEDED;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+
+.content-area {
+  display: flex;
+}
+
+
+.outer-wrap {
+  max-width: 1800px;
+  margin: auto;
+}
+
+
+
+/*--------------------------------------------------------------
+Start Header styles
+--------------------------------------------------------------*/
+
+.site-header {
+  background: #F6D200 url(../images/main.jpg) no-repeat left bottom / cover;
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+}
+
+.site-info {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.site-title {
+  font-family: 'Gamja Flower', cursive;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.site-description {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  margin-top: -.8em;
+  font-style: italic;
+}
+
+.main-menu {
+  color: #fff;
+  background: #000;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: .6em 1em;
+  display: block;
+  transition: all .5s ease;
+}
+
+.main-menu li a:hover {
+  background-color: black;
+  color: #F6D200;
+}
+
+
+.main-menu ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.main-menu ul li {
+  flex-grow: 1;
+  flex-basis: auto;
+  flex-shrink: 0;
+}
+
+.site-title {
+  font-size: 4em;
+}
+
+
+/*--------------------------------------------------------------
+End Header styles
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+    START THE POSTS STYLES
+--------------------------------------------------------------*/
+
+.main-content-area {
+  padding: 2em;
+}
+
+.post {
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+.post a {
+  color: black;
+  text-decoration: none;
+}
+
+.post-content {
+  padding: 0 40px 20px;
+}
+
+.post-content h2 {
+  background-color: #F6D200;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  margin: 0 -40px 30px;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post-one-third {
+  flex-basis: 32%;
+}
+
+.post-half {
+  flex-basis: 49%;
+}
+
+.post-full {
+  flex-basis: 100%;
+}
+
+@media screen and (max-width: 600px)  {
+     /*600pxまで*/
+  .post-one-third {
+    flex-basis: 100%;
+  }
+
+  .post-half {
+    flex-basis: 100%;
+  } 
+}
+
+/*--------------------------------------------------------------
+    END THE POSTS STYLES
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+    START WATCH SECTION STYLES
+--------------------------------------------------------------*/
+
+.section-header {
+  color: black;
+  font-size: 3em;
+  text-align: center;
+}
+
+.watch-card {
+  margin-bottom: 1em;
+}
+
+.watch-content {
+  background-color: black;
+  color: white;
+  padding: 3em;
+}
+
+.watch-content h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.movie-info {
+  font-weight: bold;
+}
+
+.movie-info span {
+  padding-right: 1.5em;
+}
+
+.movie-story {
+  margin: 1em 0;
+}
+
+.watch-content a {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.watch-card {
+  display: flex;
+}
+
+@media screen and (max-width: 600px)  {
+  .watch-card {
+    flex-direction: column;
+  }
+}
+
+.watch-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.img-right {
+  order: 2;
+}
+
+.watch-img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*--------------------------------------------------------------
+    END WATCH SECTION STYLES
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+start Section gallery styles
+--------------------------------------------------------------*/
+
+.gallery-imgs {
+  margin-left: -8px;
+}
+
+.gallery-imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  height: 250px;
+  flex-grow: 1;
+  margin: 0 0 8px 8px;
+}
+
+.gallery-img:nth-child(4n+1) {
+  flex-basis: 250px;
+}
+
+.gallery-img:nth-child(4n+2) {
+  flex-basis: 325px;
+}
+
+.gallery-img:nth-child(4n+3) {
+  flex-basis: 180px;
+}
+
+.gallery-img:nth-child(4n+4) {
+  flex-basis: 380px;
+}
+
+.gallery-img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*--------------------------------------------------------------
+end Section gallery styles
+--------------------------------------------------------------*/
